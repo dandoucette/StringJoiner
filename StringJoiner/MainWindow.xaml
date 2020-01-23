@@ -1,0 +1,17 @@
+﻿<Window x:Class="StringJoiner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StringJoiner"
+        mc:Ignorable="d"
+        Title="String Joiner" Height="450" Width="800">
+    <DockPanel>
+        <TextBox x:Name="SourceTextBox" Margin="10" Width="300" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="CommaButton" Width="100" Click="JoinTextButton_Click" Tag=",">Comma</Button>
+            <Button x:Name="SingleQuotes" Width="100" Margin="0,10,0,0" Click="JoinTextButton_Click" Tag="','">Single Quotes (',')</Button>
+        </StackPanel>
+        <TextBox x:Name="DestinationTextBox" Margin="10" TextWrapping="Wrap"></TextBox>
+    </DockPanel>
+</Window>
