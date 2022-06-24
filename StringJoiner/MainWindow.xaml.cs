@@ -25,5 +25,10 @@ namespace StringJoiner
 
             DestinationTextBox.Text = $"{bookend}{string.Join(join, SourceTextBox.Text.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries))}{bookend}";
         }
+
+        private void SourceTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            StringLengthTextBlock.Text = SourceTextBox.Text.Length.ToString();
+        }
     }
 }
