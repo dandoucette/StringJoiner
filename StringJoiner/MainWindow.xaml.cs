@@ -28,7 +28,7 @@ namespace StringJoiner
 
         private void SourceTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            StringLengthTextBlock.Text = SourceTextBox.Text.Length.ToString();
+            StringLengthTextBlock.Text = $"Source text lenght is {SourceTextBox.Text.Length} characters"; 
         }
     }
 }
