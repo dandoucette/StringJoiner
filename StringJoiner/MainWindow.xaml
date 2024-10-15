@@ -14,7 +14,8 @@
         </StatusBar>
         <TextBox x:Name="SourceTextBox" Margin="10" Width="300" TextWrapping="Wrap" AcceptsReturn="True" TextChanged="SourceTextBox_TextChanged"></TextBox>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="CommaButton" Width="100" Click="JoinTextButton_Click" Tag=",">Comma</Button>
+            <Button x:Name="StackButton" Width="100" Click="StackButton_Click">Stack</Button>
+            <Button x:Name="CommaButton" Width="100" Margin="0,50,0,0" Click="JoinTextButton_Click" Tag=",">Comma</Button>
             <Button x:Name="SingleQuotes" Width="100" Margin="0,10,0,0" Click="JoinTextButton_Click" Tag="','">Single Quotes (',')</Button>
         </StackPanel>
         <TextBox x:Name="DestinationTextBox" Margin="10" TextWrapping="Wrap"></TextBox>

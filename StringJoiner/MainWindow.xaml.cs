@@ -28,7 +28,12 @@ namespace StringJoiner
 
         private void SourceTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            StringLengthTextBlock.Text = $"Source text lenght is {SourceTextBox.Text.Length} characters"; 
+            StringLengthTextBlock.Text = $"Source text length is {SourceTextBox.Text.Length} characters"; 
+        }
+
+        private void StackButton_Click(object sender, RoutedEventArgs e)
+        {
+            SourceTextBox.Text = string.Join("\n", DestinationTextBox.Text.Split(','));
         }
     }
 }
