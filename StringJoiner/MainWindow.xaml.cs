@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -22,8 +23,11 @@ namespace StringJoiner
             {
                 bookend = "'";
             }
+            
+            var source = SourceTextBox.Text.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            source = source.Distinct().ToArray();
 
-            DestinationTextBox.Text = $"{bookend}{string.Join(join, SourceTextBox.Text.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries))}{bookend}";
+            DestinationTextBox.Text = $"{bookend}{string.Join(join, source)}{bookend}";
         }
 
         private void SourceTextBox_TextChanged(object sender, TextChangedEventArgs e)
